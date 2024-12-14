@@ -1,0 +1,261 @@
+/*-----------------  GOOGLE FONTS  -----------------*/
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
+/*-----------------  VARIABLES  -----------------*/
+:root {
+    /* Colors */ 
+    --white_color : rgb(255, 255, 255);
+    --gold_color: rgb(255, 215, 0);
+    --green_color: rgb(45, 252, 26);
+    --spin_background: linear-gradient(to right, #fc4a1a, #f7b733);
+}
+/*-----------------  Base  -----------------*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'PT Serif', serif;
+}
+body {
+  height: 100vh;
+  background-image: url('xmas.webp'); /* Đường dẫn đến file ảnh */
+ 
+}
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Màu tối với độ trong suốt */
+  z-index: -1; /* Đưa lớp phủ xuống dưới nội dung */
+}
+/*-----------------  Styling Start  -----------------*/
+h1 {
+  position: absolute;
+  font-size: 4rem;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--gold_color);
+}
+.container {
+  width: 90%;
+  max-width: 34.37rem;
+  margin-top: 3rem;
+  max-height: 90vh;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 3rem; 
+  border-radius: 1rem;
+}
+.wheel_box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#spinWheel {
+  max-height: inherit;
+  width: inherit;
+  transform: rotate(270deg); /* Xoay vòng quay để bắt đầu từ vị trí đúng */
+  overflow: hidden; /* Ẩn nội dung tràn */
+}
+
+#spin_btn {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  height: 26%;
+  width: 26%;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 0;
+  background: var(--spin_background);
+  color: var(--white_color);
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+}
+.fa-solid {
+  position: absolute;
+  top: -8%;
+  left: 43.7%;
+  font-size: 4rem;
+  color: var(--green_color);
+  transform: rotate(-225deg);
+}
+#text {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: var(--gold_color);
+  font-weight: 500;
+  font-weight: bold;
+}
+/* Định dạng bảng */
+.table-container {
+  position: absolute;
+  top: 50%;
+  right: 5%; /* Đặt bảng ở bên phải */
+  transform: translateY(-50%);
+  background-color: #fff;
+  border: 1px solid var(--gold_color);
+  border-radius: 8px;
+  padding: 10px;
+  width: 300px;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--white_color);
+}
+
+thead {
+  background-color: var(--gold_color);
+  color: var(--body_background);
+}
+
+th, td {
+  border: 1px solid var(--gold_color);
+  padding: 8px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+table tbody tr.highlight {
+  background-color: #FFB815; /* Nền vàng nhạt */
+  font-weight: bold;
+  color: #fff; /* Chữ đen nổi bật */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+#left_result_table {
+  position: absolute;
+  top: 20%;
+  left: 2%;
+  width: 20%;
+  background-color: #fff;
+  border: 1px solid var(--gold_color);
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#left_result_table h2 {
+  text-align: center;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+#left_result_table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#left_result_table th,
+#left_result_table td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+#left_result_table th {
+  background-color: #f1c40f;
+  color: #fff;
+}
+
+#left_result_table tr:hover {
+  background-color: #f1f1f1;
+}
+/* Định nghĩa màu sắc cho các dòng trong bảng bên trái */
+#left_result_table tbody tr.won-item-row {
+  color: #fff; /* Màu chữ đen */
+  font-weight: bold; /* Chữ đậm */
+  transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi mượt */
+  background-color: #FFB815;
+}
+
+#left_result_table tbody tr.won-item-row:hover {
+  background-color: rgba(255, 215, 0, 1); /* Màu nền vàng đậm khi hover */
+}
+#spin_count_text p{
+  color: #fff;
+  font-weight: bold;
+}
+/*----------------- Base Layout -----------------*/
+body {
+  height: auto; /* Đảm bảo chiều cao tự động */
+  background-image: url('xmas.webp');
+  display: flex;
+  flex-direction: column; /* Sắp xếp phần tử theo cột */
+  align-items: center; /* Căn giữa các phần tử */
+  padding: 1rem;
+}
+
+/*----------------- Responsive Layout for Mobile -----------------*/
+@media screen and (max-width: 768px) {
+  #spin_count_text{
+    height: 150px;
+  }
+
+  h1 {
+    font-size: 1.8rem; /* Thu nhỏ kích thước tiêu đề */
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .container {
+    margin-bottom: 1.5rem; /* Tạo khoảng cách dưới vòng quay */
+    width: 100%; /* Chiếm toàn bộ chiều rộng màn hình */
+    max-width: 300px; /* Giới hạn chiều rộng */
+    display: contents;
+  }
+
+  #spinWheel {
+    width: 100%; /* Đảm bảo vòng quay vừa màn hình */
+    height: auto;
+  }
+
+  #spin_btn {
+    width: 30%; /* Điều chỉnh kích thước nút cho mobile */
+    height: 30%;
+    font-size: 1.2rem; /* Giảm kích thước chữ */
+    margin-top: 1rem;
+  }
+
+
+  #left_result_table, .table-container {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 20px;
+    position: relative;
+    left: 0;
+    top: auto;
+    transform: none;
+  }
+
+  #left_result_table table, .table-container table {
+    font-size: 0.9rem;
+    text-align: left;
+  }
+
+  #left_result_table h2 {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}

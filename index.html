@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vòng quay ngày noel</title>
+    <!---------------  CSS  --------------------->
+    <link rel="stylesheet" href="style.css" />
+    <!---------------  Font Awesome  --------------------->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!---------------  Chart JS  --------------------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <!---------------  Chart JS Plugin  --------------------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script>
+  </head>
+  <body>
+    <h1>Vòng Quay May Mắn</h1>
+    <div id="spin_count_text"></div>
+    <!-- Bộ đếm số lần quay -->
+
+    <div class="container">
+      <div class="wheel_box">
+        <canvas id="spinWheel"></canvas>
+        <button id="spin_btn">Quay</button>
+        <i class="fa-solid fa-location-arrow"></i>
+      </div>
+      <div id="text"><p>Nhấn quay đi nàooo</p></div>
+    </div>
+    <div id="left_result_table">
+      <h2>Vật Phẩm Đã Trúng</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Phần Thưởng</th>
+          </tr>
+        </thead>
+        <tbody id="left_result_body">
+          <!-- Các vật phẩm sẽ được thêm vào đây -->
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-container">
+      <h2 style="text-align: center; padding-bottom: 10px">
+        Danh sách vật phẩm
+      </h2>
+      <table>
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Quà Tặng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>1 ly trà sữa size L</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>50.000 VNĐ</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>100.000 VNĐ</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>1 nụ hôn đến từ anh 👌</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Được mua trà sữa cho anh</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>1 bữa ăn từ anh 🤙🤙</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>200.000 VNĐ</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Bé 3 12 con giáp</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>Bé 3 400%</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>500.000 VNĐ</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>Ví</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>Túi Xách</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!---------------  SCRIPT  --------------------->
+    <script src="script.js"></script>
+  </body>
+</html>
